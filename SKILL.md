@@ -1,11 +1,11 @@
 ---
-name: epub-accessibility-evaluation
+name: nordic-epub-evaluation
 description: Evaluate unzipped EPUB files against the Nordic Accessible EPUB Guidelines version the EPUB declares (2015-1, 2020-1, or 2025-1), plus WCAG 2.2 and Nordic MathML Guidelines where applicable. Use when reviewing EPUB accessibility, checking EPUB compliance, or working with unzipped EPUB directories.
 metadata:
   version: "1.0.1"
 ---
 
-# EPUB Accessibility Evaluation
+# Nordic EPUB Evaluation
 
 Evaluate unzipped EPUBs against Norwegian accessibility standards. **Validate only against the guideline version the EPUB declares**; do not apply requirements from other versions.
 
