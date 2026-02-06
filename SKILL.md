@@ -178,7 +178,7 @@ When MathML is present, **you (the evaluator) must run** the full **NLB MathML G
 
 **Overall**: [PASS/NEEDS WORK/FAIL]
 
-## Detailed findings table (actionable for production operators)
+## Detailed findings table
 
 List **every** finding in the table below. One row per finding. Include file path (relative to EPUB root), line number, exact or summarised current content, the checklist requirement it fails or differs from, and a concrete action. If there are no findings in a severity group, state "Ingen" / "None" under that severity and leave the table body with zero rows for that group, or omit the subsection.
 
