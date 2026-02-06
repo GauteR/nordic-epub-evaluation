@@ -2,7 +2,7 @@
 name: nordic-epub-evaluation
 description: Evaluate unzipped EPUB files against the Nordic Accessible EPUB Guidelines (2015-1, 2020-1, or 2025-1), WCAG 2.2 and Nordic MathML Guidelines; includes validation towards Daisy Pipeline (nordic-epub3-validate). Use when reviewing EPUB accessibility, checking EPUB compliance, or working with unzipped EPUB directories.
 metadata:
-  version: "1.0.6"
+  version: "1.0.7"
 ---
 
 # Nordic EPUB Evaluation
@@ -14,8 +14,6 @@ Evaluate unzipped EPUBs against Nordic accessibility standards. **Validate only 
 **Important**: This skill assumes the EPUB is unzipped. Ask the user for the path to the unzipped EPUB directory before proceeding.
 
 **All files must be systematically checked.** Do not rely on sampling: every content document (XHTML), the navigation document, and the package document must be included in the evaluation. Report which files were examined and ensure checks (images, tables, MathML, page breaks, structure) cover all relevant files.
-
-Evaluation can include **validation against the Daisy Pipeline** (the nordic-epub3-validate job). This skill covers **manual** evaluation and reporting against Nordic/WCAG/MathML, and can be used to interpret or supplement reports from automated validation.
 
 Typical EPUB structure:
 
@@ -32,10 +30,6 @@ epub-directory/
     ├── images/
     └── fonts/ (optional)
 ```
-
-## Validation against the Daisy Pipeline
-
-EPUB files can be validated against the **Daisy Pipeline job "nordic-epub3-validate"** (official validator: nordic-epub3-dtbook-migrator). The job checks Nordic EPUB 3 guidelines; the report is typically delivered as `report.xhtml` (e.g. under `html-report/report.xhtml` in the Pipeline output). Manual evaluation in this skill should be consistent with and supplement what the Daisy Pipeline reports.
 
 ## Evaluation Workflow
 
@@ -186,19 +180,19 @@ When MathML is present, validate against the **NLB MathML Guidelines checklist**
 
 ### 🔴 Critical Issues (must fix)
 
-[List critical issues with file paths and line references.]
+[List critical issues with file paths and line references, with extensive detail in an unordered list.]
 
 ### 🟡 Warnings (should fix)
 
-[List warnings with recommendations.]
+[List warnings with recommendations, with extensive detail in an unordered list.]
 
 ### 🟢 Recommendations (nice to have)
 
-[List optional improvements]
+[List optional improvements, with extensive detail in an unordered list.]
 
 ### MathML: Addendum for upgrading to the new guideline version
 
-(Include when MathML is present and relevant.) Validation was run against the Nordic MathML checklist (2022). For changes required to upgrade this EPUB to the newer MathML guideline version, see [mathml-guidelines-differences.md](mathml-guidelines-differences.md).
+(Include when MathML is present and relevant.) Validation was run against the Nordic MathML checklist (2022). For changes required to upgrade this EPUB to the newer MathML guideline version, print the results from [mathml-checklist.md](mathml-checklist.md).
 
 ## Files Examined
 
@@ -209,7 +203,7 @@ When MathML is present, validate against the **NLB MathML Guidelines checklist**
 ## References
 
 - Nordic EPUB Guidelines [version used]: https://format.mtm.se/nordic_epub/[2015-1|2020-1|2025-1]
-- Nordic MathML Guidelines: https://github.com/nlbdev/mathml-guidelines
+- NLB & Nordic MathML Guidelines: https://github.com/nlbdev/mathml-guidelines
 - WCAG 2.2: https://www.w3.org/TR/WCAG22/
 - DAISY Knowledge Base: https://kb.daisy.org/publishing/docs/
 ```
@@ -231,5 +225,5 @@ Apply severity **only for requirements of the declared guideline version**. Do n
   - 2025-1: [nordic-epub-checklist.md](nordic-epub-checklist.md) (2025-1)
   - 2020-1: [nordic-epub-checklist-2020-1.md](nordic-epub-checklist-2020-1.md)
   - 2015-1: [nordic-epub-checklist-2015-1.md](nordic-epub-checklist-2015-1.md)
-- For MathML validation: [mathml-checklist-nlb-production.md](mathml-checklist-nlb-production.md) (NLB MathML Guidelines, 2022). For changes required to upgrade to the newer MathML guideline version: [mathml-guidelines-differences.md](mathml-guidelines-differences.md).
+- For MathML validation: [mathml-checklist-nlb-production.md](mathml-checklist-nlb-production.md) (NLB MathML Guidelines, 2022). For new MathML validation: [mathml-checklist.md](mathml-checklist.md) (Nordic MathML Guidelines). For changes required to upgrade to the newer MathML guideline version: [mathml-guidelines-differences.md](mathml-guidelines-differences.md).
 - For WCAG mapping: [wcag-mapping.md](wcag-mapping.md)
